@@ -1,15 +1,12 @@
 <body>
-  <h1>ようこそ<strong>Bookers</strong>へ！
-  </h1>
-  <p><strong>Bookers</strong>ではさまざまな書籍に関するあなたの意見や</p>
-  <p>印象を共有し交換することができます</p>
-</body>
-
-<h1>投稿一覧</h1>
+  <p><strong>Books</strong>
+  </p>
 <% @books.each do |f| %>
-  <p>タイトル</p>
+  <p>Title</p>
   <span><%= f.title %></span>
+  <p>Body</p>
   <span><%= f.body %></span>
+  <!-- 各ボタンを配置 -->
 <% end %>
 
 <h1>新規投稿</h1>
@@ -21,3 +18,5 @@
   <%= f.text_area :body %>
   <%= f.submit '投稿' %>
 <% end %>
+
+</body>

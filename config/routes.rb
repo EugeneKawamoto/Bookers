@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 # get 'books/:id' => 'books#show'
 # get 'books/id/edit' => 'books#edit'
   resources :books
-
+  get '/' => 'books#start'
 end
