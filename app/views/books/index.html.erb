@@ -1,2 +1,23 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<body>
+  <h1>ようこそ<strong>Bookers</strong>へ！
+  </h1>
+  <p><strong>Bookers</strong>ではさまざまな書籍に関するあなたの意見や</p>
+  <p>印象を共有し交換することができます</p>
+</body>
+
+<h1>投稿一覧</h1>
+<% @books.each do |f| %>
+  <p>タイトル</p>
+  <span><%= f.title %></span>
+  <span><%= f.body %></span>
+<% end %>
+
+<h1>新規投稿</h1>
+<!-- form_for部分 -->
+<%= form_for(@book) do |f| %>
+  <h4>タイトル</h4>
+  <%= f.text_field :title %>
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+  <%= f.submit '投稿' %>
+<% end %>
