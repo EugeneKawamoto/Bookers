@@ -1,20 +1,23 @@
 <body>
-  <p><strong>Books</strong>
-  </p>
-<% @books.each do |f| %>
+  <h1><strong>Books</strong>
+  </h1>
+<% @books.each do |book| %>
   <p>Title</p>
-  <span><%= f.title %></span>
+  <span><%= book.title %></span>
   <p>Body</p>
-  <span><%= f.body %></span>
-  <!-- 各ボタンを配置 -->
+  <span><%= book.body %></span>
+  <%= link_to 'Show', book_path(book.id) %>
+  <%= link_to 'Edit', edit_book_path(book) %>
+  <%= link_to 'Destroy', book_path(book) %>
+
 <% end %>
 
-<h1>新規投稿</h1>
+<p><strong>New Book<strong></p>
 <!-- form_for部分 -->
-<%= form_for(@book) do |f| %>
-  <h4>タイトル</h4>
+<%= form_for @book do |f| %>
+  <h4>Title</h4>
   <%= f.text_field :title %>
-  <h4>本文</h4>
+  <h4>Body</h4>
   <%= f.text_area :body %>
   <%= f.submit '投稿' %>
 <% end %>
