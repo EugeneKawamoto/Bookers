@@ -1,3 +1,9 @@
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
 <p><strong>Editing Book</strong></p>
 <%= form_for(@book) do |f| %>
   <h4>Title</h4>
