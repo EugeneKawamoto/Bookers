@@ -3,9 +3,15 @@
       <%= flash[:notice] %>
     </div>
   <% end %>
-<h2>Tilte:</h2>
-<p><%= @book.title %></p>
-<h2>Body:</h2>
-<p><%= @book.body %></p>
-  <%= link_to 'Edit', edit_book_path %>
-  <%= link_to 'Back', books_path %>
+<table>
+  <tr>
+    <td><strong>Tilte:</strong></td>
+    <td><%= @book.title %></td>
+  </tr>
+  <tr>
+    <td><strong>Body:</strong></td>
+    <td><%= @book.body %></td>
+  </tr>
+</table>
+<%= link_to 'Edit', edit_book_path %> |
+<%= link_to 'Back', books_path %>
