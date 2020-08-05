@@ -1,4 +1,9 @@
 <body>
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
   <h1><strong>Books</strong></h1>
   <table>
     <tr>

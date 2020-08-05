@@ -33,9 +33,11 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    book = Book.find(params[:id])
-    book.destroy
-    redirect_to book_path
+    @book = Book.find(params[:id])
+    if @book.destroy
+      flash[:notice] = "Book was successfully destroyed."
+      redirect_to books_path
+    end
   end
 
   private
