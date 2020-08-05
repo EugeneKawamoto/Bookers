@@ -29,11 +29,16 @@ body {
   margin: 33px;
 }
 
+h1 {
+  margin-bottom: 17.42px;
+}
+
 p {
   margin: 33px;
 }
 
 .flash {
+  margin: 33px;
   color: green;
 }
 
@@ -43,7 +48,6 @@ td {
 
 th {
   font-weight: bold;
-    text-align: -internal-center;
 }
 
 a {
@@ -57,6 +61,18 @@ a:visited {
 a:hover {
   background-color: #000;
   color: #fff;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.actions {
+  padding-top: 1px;
+  padding-right: 6px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  border: 1px;
 }
 
 label {
