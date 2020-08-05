@@ -21,15 +21,15 @@
     <% end %>
   </table>
 <h2><strong>New Book<strong></h2>
-<% if @book.errors.any? %>
-  <div id="error_explanation" class="alert alert-danger">
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message +"error" %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message +"error" %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <%= form_for @book do |f| %>
   <div class="field">
     <label for="book_title">Title</label>
@@ -43,5 +43,4 @@
     <%= f.submit 'Create Book' %>
   </div>
 <% end %>
-
 </body>
