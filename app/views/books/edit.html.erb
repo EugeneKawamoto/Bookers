@@ -1,19 +1,19 @@
 <body>
-  <% if flash[:notice] %>
-    <div class="flash">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 <h1><strong>Editing Book</strong></h1>
-  <% if @book.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger">
-      <ul>
-        <% @book.errors.full_messages.each do |message| %>
-          <li><%= message +"error" %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if @book.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+      <li><%= message +"error" %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_for @book do |f| %>
   <div class="field">
     <label for="book_title">Title</label>
